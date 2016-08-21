@@ -24,7 +24,7 @@
 using namespace std;
 
 #if !defined(TARGET_WINDOWS)
-  inline float abs(float Val)
+  inline float iabs(float Val)
   {
     if(Val >= 0.0f)
     {
@@ -441,7 +441,7 @@ float CADSPHelpers::Convert_dB_TO_Value(float dB)
 
 float CADSPHelpers::Convert_Value_TO_dB(float Scale)
 {
-  return 20.0f*log10f(abs(Scale));
+  return 20.0f*log10f(iabs(Scale));
 }
 
 // reserved for future implementation
